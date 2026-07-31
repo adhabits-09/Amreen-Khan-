@@ -99,20 +99,19 @@
         }
     </style>
 <base target="_blank">
+<base target="_blank">
 </head>
 <body>
 
 <!-- FORM POPUP BACKDROP -->
 <div class="form-backdrop" id="formBackdrop"></div>
 
-<!-- HERO SECTION -->
-<section class="hero-section text-center">
-    <div class="container position-relative">
-        <div class="badge-custom animate-stagger mb-3" style="--order:1">🚺 Women Only Community</div>
-        <h1 class="display-3 fw-bold gradient-text mb-2 animate-stagger" style="--order:2">
-            Trained <span class="counter" data-target="1000" data-suffix="+">0</span> Students
-        </h1>
-        <p class="hero-text-compact text-muted animate-stagger" style="--order:3">From Unskilled to Professionals</p>
+<!-- HERO / WOMEN-ONLY COMMUNITY BANNER -->
+<section class="py-5 text-white" style="background:linear-gradient(135deg,#FF5E8E,#6A67CE)">
+    <div class="container text-center">
+        <div class="badge-custom animate-stagger mb-3" style="--order:1;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3)">👑 WOMEN-ONLY COMMUNITY</div>
+        <h1 class="display-3 fw-bold mb-3 animate-stagger" style="--order:2">Join <span class="counter" data-target="10000" data-suffix="+" style="color:#FFFFFF">0</span> Women Building Digital Success From Home</h1>
+        <p class="fs-5 mb-0 animate-stagger" style="--order:3;max-width:700px;margin:0 auto;opacity:0.95">From Homemaker to Skill Mentor — Join our exclusive women-only community mastering phone-based digital skills. Rise together with Amreen Khan.</p>
     </div>
 </section>
 
@@ -433,10 +432,7 @@
     closeFormBtn.addEventListener('click',closeForm);
     document.addEventListener('click',(e)=>{
         const trigger=e.target.closest('.open-any');
-        if(trigger&&!trigger.closest('#formContainer')){
-            e.preventDefault();
-            openForm(trigger.getAttribute('data-source')||'Website');
-        }
+        if(trigger&&!trigger.closest('#formContainer')){e.preventDefault();openForm(trigger.dataset.source||'Website');}
     });
 
     /* ---- SUBMIT → SHEET + WHATSAPP ---- */
